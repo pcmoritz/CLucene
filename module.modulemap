@@ -1,4 +1,4 @@
-module CCurl [system] {
+module CLucene [system] {
   header "shim.h"
   link "lucene++"
   export *
