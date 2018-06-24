@@ -3,13 +3,23 @@ extern "C"
 {
 #endif  // __cplusplus
 
-typedef struct LuceneContext LuceneContext;
+typedef struct LuceneWriteContext LuceneWriteContext;
 
-LuceneContext* LuceneCreateContext(const char* indexDirectory);
+LuceneWriteContext* LuceneCreateWriteContext(const char* indexDirectory);
 
-void LuceneIndexDocs(LuceneContext* context, const char* sourceDirectory);
+void LuceneIndexDocs(LuceneWriteContext* context, const char* sourceDirectory);
 
-void LuceneDeleteContext(LuceneContext* context);
+void LuceneOptimizeIndex(LuceneWriteContext* context);
+
+void LuceneDeleteWriteContext(LuceneWriteContext* context);
+
+typedef struct LuceneReadContext LuceneReadContext;
+
+LuceneReadContext* LuceneCreateReadContext(const char* indexDirectory);
+
+void LuceneQuery(LuceneReadContext* context, const char* field, const char* search_query);
+
+void LuceneDeleteReadContext(LuceneReadContext* context);
 
 #if __cplusplus
 }
