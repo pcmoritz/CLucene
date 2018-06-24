@@ -1,12 +1,9 @@
+// swift-tools-version:4.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 import PackageDescription
 
 let package = Package(
-  name: "CLucene",
-  pkgConfig: "liblucene++.pc",
-  products: [
-    .library(name: "CLucene", targets: ["CLucene"])
-  ],
-  targets: [
-    .target(name: "CLucene")
-  ]
+    name: "CLucene",
+    pkgConfig: "liblucene++"
 )
