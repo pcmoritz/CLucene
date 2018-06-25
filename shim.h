@@ -17,7 +17,9 @@ typedef struct LuceneReadContext LuceneReadContext;
 
 LuceneReadContext* LuceneCreateReadContext(const char* indexDirectory);
 
-void LuceneQuery(LuceneReadContext* context, const char* field, const char* search_query);
+size_t LuceneQuery(LuceneReadContext* context, const char* field, const char* search_query);
+
+void LuceneWriteQueryResult(LuceneReadContext* context, uint8_t* data, size_t size);
 
 void LuceneDeleteReadContext(LuceneReadContext* context);
 
