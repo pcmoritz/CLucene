@@ -1,3 +1,6 @@
+#include <stddef.h>
+#include <stdint.h>
+
 #if __cplusplus
 extern "C"
 {
