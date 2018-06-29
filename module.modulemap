@@ -1,5 +1,5 @@
 module CLucene [system] {
   header "shim.h"
-  link "lucene++"
+  link "lucenelib"
   export *
 }
