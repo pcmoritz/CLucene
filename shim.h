@@ -12,6 +12,8 @@ LuceneWriteContext* LuceneCreateWriteContext(const char* indexDirectory);
 
 void LuceneIndexDocs(LuceneWriteContext* context, const char* sourceDirectory);
 
+void LuceneIndexDoc(LuceneWriteContext* context, uint8_t* data, size_t length);
+
 void LuceneOptimizeIndex(LuceneWriteContext* context);
 
 void LuceneDeleteWriteContext(LuceneWriteContext* context);
