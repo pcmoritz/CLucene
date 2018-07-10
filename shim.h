@@ -24,6 +24,8 @@ LuceneReadContext* LuceneCreateReadContext(const char* indexDirectory);
 
 size_t LuceneQuery(LuceneReadContext* context, const char* field, const char* search_query);
 
+size_t LuceneLookup(LuceneReadContext* context, int32_t index);
+
 void LuceneWriteQueryResult(LuceneReadContext* context, uint8_t* data, size_t size);
 
 void LuceneDeleteReadContext(LuceneReadContext* context);
